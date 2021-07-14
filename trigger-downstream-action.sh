@@ -1,1 +1,1 @@
-curl -H "Authorization: token $1" -H "Accept: application/vnd.github.v3+json" -H "Content-Type: application/json" https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches -d '{"event_type": "custom_event_type"}'
+curl -H "Authorization: token $1" -H "Accept: application/vnd.github.v3+json" -H "Content-Type: application/json" https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches -d '{ "event_type": "custom_event_type"}'
