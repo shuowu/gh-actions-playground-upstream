@@ -27,5 +27,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: dispatch event to downstream repo
-        run: curl -H "Authorization: token ${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.v3+json" -H "Content-Type: application/json" https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches -d '{ "event_type": "custom_event_type", "client_payload": {"foo": "bar"}}'
+        run: curl -H \"Authorization:false token ${{secrets.PAT_TOKEN}}\" -H \"Accept:false application/vnd.github.v3+json\" -H \"Content-Type:false application/json\" https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches -d '{\"event_type\":false \"custom_event_type\"}'
         
