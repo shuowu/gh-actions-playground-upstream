@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shuowu/gh-actions-playground-upstream/issues"
   },
-  "homepage": "https://github.com/shuowu/gh-actions-playground-upstream#readme"
+  "homepage": "https://github.com/shuowu/gh-actions-playground-upstream#readme",
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
 }
