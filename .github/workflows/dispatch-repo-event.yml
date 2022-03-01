@@ -1,0 +1,30 @@
+name: dispatch-repo-event
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with: 
+        node-version: "14.x"
+    - name: Install dependencies
+      run: npm install
+
+    - name: Dispatch event
+      run: node ./scripts/dispatchEvent.js
+
+
+      # # Runs a single command using the runners shell
+      # - name: dispatch event to downstream repo
+      #   run: sh ./trigger-downstream-action.sh ${{secrets.PAT_TOKEN}}

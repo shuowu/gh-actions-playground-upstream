@@ -1,0 +1,19 @@
+{
+  "name": "gh-actions-playground-upstream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuowu/gh-actions-playground-upstream.git"
+  },
+  "author": "Shuo Wu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shuowu/gh-actions-playground-upstream/issues"
+  },
+  "homepage": "https://github.com/shuowu/gh-actions-playground-upstream#readme"
+}
