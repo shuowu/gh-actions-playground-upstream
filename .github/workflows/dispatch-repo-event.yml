@@ -26,7 +26,7 @@ jobs:
       with: 
         github-token: ${{secrets.PAT_TOKEN}}
         script: |
-          github.repos.createDispatchEvent({
+          github.rest.repos.createDispatchEvent({
             owner: context.repo.owner,
             repo: 'gh-actions-playground-downstream',
             event_type: 'custom_event_type',
