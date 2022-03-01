@@ -8,7 +8,11 @@ const event = (() => {
     return undefined;
   }
 })();
-console.log(event, event.commits, event.commits.message);
+const shouldMerge = (() => {
+  const parts = event.commits[0].message.split('/n');
+  return parts[parts.length - 1] === 'merge';
+})();
+console.log(event, event.commits, event.commits[0].message);
 axios({
   url: 'https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches',
   method: 'post',
@@ -20,7 +24,7 @@ axios({
   data: {
     'event_type': 'custom_event_type',
     'client_payload': {
-      a: 'a'
+      merge: shouldMerge
     }
   }
 })
