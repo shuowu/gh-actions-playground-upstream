@@ -1,9 +1,8 @@
 const axios = require('axios');
 
 const token = process.argv[2];
-
-const url = 'https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches';
-axios.post(url, {
+axios({
+  url: 'https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches',
   method: 'post',
   headers: {
     'Authorization': `token ${token}`,
@@ -17,5 +16,5 @@ axios.post(url, {
     }
   }
 })
-.then(res => console.log(res))
+.then(res => console.log(res.status))
 .catch(error => console.log(error));
