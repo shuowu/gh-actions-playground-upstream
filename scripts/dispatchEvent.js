@@ -1,8 +1,14 @@
 const axios = require('axios');
 
 const token = process.argv[2];
-const githubEvent = process.argv[3];
-console.log(githubEvent.message);
+const event = (() => {
+  try {
+    return JSON.parse(process.argv[3]);
+  } catch (e) {
+    return undefined;
+  }
+})()
+console.log(event.message);
 axios({
   url: 'https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches',
   method: 'post',
