@@ -22,5 +22,6 @@ jobs:
       run: npm install
 
     - name: Dispatch event
-      run: node ./scripts/dispatchEvent.js ${{secrets.PAT_TOKEN}}
-      
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: node ./scripts/dispatchEvent.js ${{secrets.PAT_TOKEN}} $GITHUB_CONTEXT
