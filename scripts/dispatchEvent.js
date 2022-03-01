@@ -8,7 +8,7 @@ const event = (() => {
     return undefined;
   }
 })();
-console.log(event.commits.message);
+console.log(event, event.commits, event.commits.message);
 axios({
   url: 'https://api.github.com/repos/shuowu/gh-actions-playground-downstream/dispatches',
   method: 'post',
