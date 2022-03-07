@@ -31,11 +31,7 @@ jobs:
             repo: 'gh-actions-playground-downstream',
             event_type: 'custom_event_type',
             client_payload: {
-              context
+              context,
+              merge: false
             }
-          })
-
-      
-      # env:
-      #   GITHUB_CONTEXT: ${{ toJson(github.event) }}
-      # run: node ./scripts/dispatchEvent.js ${{secrets.PAT_TOKEN}} "$GITHUB_CONTEXT"
+          });
