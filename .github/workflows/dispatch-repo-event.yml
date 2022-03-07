@@ -32,6 +32,6 @@ jobs:
             event_type: 'custom_event_type',
             client_payload: {
               context,
-              merge: false
+              merge: true
             }
           });
